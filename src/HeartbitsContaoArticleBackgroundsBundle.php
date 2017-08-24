@@ -8,16 +8,16 @@
  *
  */
 
-namespace Heartbits\Contao\BackendTheme;
+namespace Heartbits\Contao\ArticleBackgrounds;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Bundle class.
  *
- * @package Heartbits\Contao\BackendTheme
+ * @package Heartbits\Contao\ArticleBackgrounds
  */
-class HeartbitsContaoBackendThemeBundle extends Bundle
+class HeartbitsContaoArticleBackgroundsBundle extends Bundle
 {
 
 }

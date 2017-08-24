@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace
 /**
  * Subpalettes
  */
-$GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_style,background_picture';
+$GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_color_inside,background_style,background_picture';
 
 /**
  * Fields
@@ -67,7 +67,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_article_background']['background_color'],
 	'exclude'                 => true,
 	'inputType'               => 'select',
-	'options'                 => array('white', 'light-gray', 'dark-gray', 'black', 'gold'),
+	'options'                 => array('white', 'light-gray', 'dark-gray', 'blue', 'dark-blue', 'red'),
   'reference'               => &$GLOBALS['TL_LANG']['tl_article_background']['colors'],
 	'eval'                    => array('includeBlankOption'=>true, 'tl_class'=>'w50 clr'),
 	'sql'                     => "varchar(32) NOT NULL default ''"
@@ -77,7 +77,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_article_background']['background_color_inside'],
 	'exclude'                 => true,
 	'inputType'               => 'select',
-  'options'                 => array('white', 'light-gray', 'dark-gray', 'black', 'gold'),
+  'options'                 => array('white', 'light-gray', 'dark-gray', 'blue', 'dark-blue', 'red'),
   'reference'               => &$GLOBALS['TL_LANG']['tl_article_background']['colors'],
 	'eval'                    => array('includeBlankOption'=>true, 'tl_class'=>'w50 clr'),
 	'sql'                     => "varchar(32) NOT NULL default ''"

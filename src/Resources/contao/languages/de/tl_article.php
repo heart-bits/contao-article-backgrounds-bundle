@@ -36,6 +36,7 @@ $GLOBALS['TL_LANG']['tl_article_background']['colors']['light-gray'] 	= 'Hellgra
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['mid-gray'] 	= 'Mittelgrau';
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['dark-gray'] 	= 'Dunkelgrau';
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['blue'] 	= 'Blau';
+$GLOBALS['TL_LANG']['tl_article_background']['colors']['dark-blue'] 	= 'Dunkelblau';
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['red'] 	= 'Rot';
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['gold'] 	= 'Gold';
 $GLOBALS['TL_LANG']['tl_article_background']['colors']['green-blue'] 	= 'Grün-Blau';

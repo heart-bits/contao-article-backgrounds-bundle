@@ -1,5 +1,7 @@
 <?php
 
+    namespace Heartbits;
+
 class ArticleBackgrounds extends \Frontend {
 	/**
 	 * Template

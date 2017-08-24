@@ -29,7 +29,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(HeartbitsArticleBackgroundsBundle::class)
+            BundleConfig::create(HeartbitsContaoArticleBackgroundsBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class])
         ];
     }
