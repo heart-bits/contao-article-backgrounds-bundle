@@ -1,0 +1,8 @@
+<?php
+
+// Add the animations style sheet
+$GLOBALS['TL_CSS'][] = 'system/modules/hb-article-backgrounds/assets/css/slider.min.css|static';
+
+// Add the scrollspy javascript
+$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/hb-article-backgrounds/assets/js/slider.min.js|static';
+?>

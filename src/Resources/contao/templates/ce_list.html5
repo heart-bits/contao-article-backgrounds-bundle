@@ -1,0 +1,13 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <<?= $this->tag ?> <?php if ($this->liststart): ?>start="<?= $this->liststart ?>"<?php endif; ?>>
+    <?php if ($this->liststart !== '') {$i = intval($this->liststart);} else {$i = 1;} ?>
+    <?php foreach ($this->items as $item): ?>
+      <?php $i++; ?>
+      <li data-number="<?= $i-1 ?>"<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?>><?= $item['content'] ?></li>
+    <?php endforeach; ?>
+  </<?= $this->tag ?>>
+
+<?php $this->endblock(); ?>

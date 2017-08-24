@@ -1,0 +1,10 @@
+
+<div<?php if ($this->animate_switch): ?> data-uk-scrollspy="{cls:'uk-animation-<?php echo $this->animate_effect; ?>'<?php if ($this->animate_delay): ?>, delay:<?php echo $this->animate_delay; ?><?php endif; ?><?php if ($this->animate_repeat): ?>, repeat: true<?php endif; ?>}"<?php endif; ?> <?php if ($this->parallax_switch): ?>data-uk-parallax="{<?php if ($this->parallax_x): ?>x: '<?php echo $this->parallax_x; ?>',<?php endif; ?><?php if ($this->parallax_y): ?>y: '<?php echo $this->parallax_y; ?>',<?php endif; ?><?php if ($this->parallax_rotate): ?>rotate: '<?php echo $this->parallax_rotate; ?>',<?php endif; ?><?php if ($this->parallax_scale): ?>scale: '<?php echo $this->parallax_scale; ?>',<?php endif; ?><?php if ($this->parallax_color): ?>color: <?php echo $this->parallax_color; ?>',<?php endif; ?><?php if ($this->parallax_backgroundcolor): ?>background-color: '<?php echo $this->parallax_backgroundcolor; ?>',<?php endif; ?><?php if ($this->parallax_bordercolor): ?>border-color: '<?php echo $this->parallax_bordercolor; ?>',<?php endif; ?><?php if ($this->parallax_opacity): ?>opacity: '<?php echo $this->parallax_opacity; ?>',<?php endif; ?>}"<?php endif; ?> class="<?php echo $this->class; ?>  block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+
+  <?php $this->block('content'); ?>
+  <?php $this->endblock(); ?>
+
+</div>

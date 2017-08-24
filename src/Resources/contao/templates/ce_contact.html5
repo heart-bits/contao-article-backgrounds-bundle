@@ -1,0 +1,13 @@
+<div class="<?php echo $this->class; ?> block">
+
+  <figure class="image_container"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
+
+    <?php $this->insert('picture_default', $this->picture); ?>
+
+  </figure>
+
+  <div class="contact-info">
+    <?= $this->text ?>
+  </div>
+
+</div>
