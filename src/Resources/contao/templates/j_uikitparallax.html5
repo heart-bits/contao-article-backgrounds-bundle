@@ -1,5 +1,0 @@
-<?php
-
-// Add the scrollspy javascript
-$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/hb-article-backgrounds/assets/js/parallax.min.js|static'; 
-?>

@@ -8,7 +8,7 @@
  *
  */
 
-namespace Heartbits\Contao\ArticleBackgrounds;
+namespace Heartbits\ContaoArticleBackgrounds;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

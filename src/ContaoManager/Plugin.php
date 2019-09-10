@@ -3,18 +3,18 @@
 /**
  * @package    contao-article-backgrounds
  * @author     heart-bits <hi@heart-bits.com>
- * @copyright  2017 heart-bits Sascha Wustmann. All rights reserved.
+ * @copyright  2019 heart-bits Sascha Wustmann. All rights reserved.
  * @filesource
  *
  */
 
-namespace Heartbits\Contao\ArticleBackgrounds\ContaoManager;
+namespace Heartbits\ContaoArticleBackgrounds\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Heartbits\Contao\ArticleBackgrounds\HeartbitsContaoArticleBackgroundsBundle;
+use Heartbits\ContaoArticleBackgrounds\HeartbitsContaoArticleBackgroundsBundle;
 
 /**
  * Class Plugin.

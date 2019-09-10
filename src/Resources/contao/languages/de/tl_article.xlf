@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="plaintext" original="src/Resources/contao/languages/de/tl_article.xlf" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_article.article_background">
+                <source>Background</source>
+                <target>Hintergrund</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_switch.0">
+                <source>Use background</source>
+                <target>Hintergrund verwenden</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_switch.1">
+                <source>Would you like to use a color or an image in the background?</source>
+                <target>Soll eine Hintergrundfarbe verwendet werden?</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_picture.0">
+                <source>Background picture</source>
+                <target>Hintergrundbild</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_picture.1">
+                <source>Choose the background for the article.</source>
+                <target>Bitte wählen Sie ein Bild für diesen Abschnitt aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_size.0">
+                <source>Background size</source>
+                <target>Hintergrundgröße</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_size.1">
+                <source>Choose the size of the background for the article.</source>
+                <target>Bitte wählen Sie die Größe des Bildes für diesen Abschnitt aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_color.0">
+                <source>Outside background color</source>
+                <target>Hintergrundfarbe außen</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_color.1">
+                <source>Here you can choose a outside background color.</source>
+                <target>Hier können Sie eine äußere Hintergrundfarbe auswählen.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_color_inside.0">
+                <source>Inside background color</source>
+                <target>Hintergrundfarbe innen</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_color_inside.1">
+                <source>Here you can choose a inside background color.</source>
+                <target>Hier können Sie eine innere Hintergrundfarbe auswählen.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_position.0">
+                <source>Background position</source>
+                <target>Hintergrundposition</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_position.1">
+                <source>Here you can select the position of the background image.</source>
+                <target>Hier können Sie eine Hintergrundposition wählen.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_style.0">
+                <source>Background style</source>
+                <target>Hintergrundart</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_style.1">
+                <source>Here you should select the style of your background. This is mandatory for displaying the correct text colors on the background.</source>
+                <target>Hier sollten Sie eine Hintergrundart auswählen. Diese wird zur korrekten Darstellung der Texte auf dem Hintergrund benötigt.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_float.0">
+                <source>Positioning</source>
+                <target>Positionierung</target>
+            </trans-unit>
+            <trans-unit id="tl_article.background_float.1">
+                <source>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</source>
+                <target>Hier können Sie auswählen, ob das Bild links oder rechts positioniert werden soll. Lassen Sie das Feld frei, wenn der Hintergrund vollflächig dargestellt werden soll.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.styles.light">
+                <source>Light</source>
+                <target>Hell</target>
+            </trans-unit>
+            <trans-unit id="tl_article.styles.dark">
+                <source>Dark</source>
+                <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.white">
+                <source>White</source>
+                <target>Weiß</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.light-gray">
+                <source>Light-Gray</source>
+                <target>Hellgrau</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.dark-gray">
+                <source>Dark-Gray</source>
+                <target>Dunkelgrau</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.black">
+                <source>Black</source>
+                <target>Schwarz</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.yellow">
+                <source>Yellow</source>
+                <target>Gelb</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.blue">
+                <source>Blue</source>
+                <target>Blau</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.green">
+                <source>Green</source>
+                <target>Grün</target>
+            </trans-unit>
+            <trans-unit id="tl_article.colors.red">
+                <source>Red</source>
+                <target>Rot</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
