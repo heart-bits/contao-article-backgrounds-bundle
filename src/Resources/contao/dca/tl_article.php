@@ -12,11 +12,11 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'] = array('protected', 'published', 'background_switch');
+$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'] = array('protected', 'published', 'background_switch', 'polygon_switch');
 
 $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
     'keywords;',
-    'keywords;{article_background},background_switch;',
+    'keywords;{article_background},background_switch,polygon_switch;',
     $GLOBALS['TL_DCA']['tl_article']['palettes']['default']
 );
 
@@ -24,6 +24,7 @@ $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
  * Subpalettes
  */
 $GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_color_inside,background_size,background_style,background_picture,background_float';
+$GLOBALS['TL_DCA']['tl_article']['subpalettes']['polygon_switch'] = 'polygon_style,polygon_color,polygon_logo';
 
 /**
  * Fields
@@ -59,16 +60,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_color'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => array(
-        'white',
-        'light-gray',
-        'dark-gray',
-        'black',
-        'yellow',
-        'blue',
-        'green',
-        'red'
-    ),
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => array(
         'includeBlankOption' => true,
@@ -81,16 +73,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_color_inside'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => array(
-        'white',
-        'light-gray',
-        'dark-gray',
-        'black',
-        'yellow',
-        'blue',
-        'green',
-        'red'
-    ),
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => array(
         'includeBlankOption' => true,
@@ -101,25 +84,27 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = array(
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_size'],
-    'exclude'                 => true,
-    'inputType'               => 'imageSize',
-    'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-    'eval'                    => array('rgxp'=>'natural', 'includeBlankOption'=>true, 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'w50'),
-    'options_callback' => static function ()
-    {
+    'exclude' => true,
+    'inputType' => 'imageSize',
+    'reference' => &$GLOBALS['TL_LANG']['MSC'],
+    'eval' => array(
+        'rgxp' => 'natural',
+        'includeBlankOption' => true,
+        'nospace' => true,
+        'helpwizard' => true,
+        'tl_class' => 'w50'
+    ),
+    'options_callback' => static function () {
         return Contao\System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(Contao\BackendUser::getInstance());
     },
-    'sql'                     => "varchar(255) NOT NULL default ''"
+    'sql' => "varchar(255) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_style'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_style'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => array(
-        'light',
-        'dark'
-    ),
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
     'eval' => array(
         'tl_class' => 'w50'
@@ -131,11 +116,46 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_float'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => array(
-        'left',
-        'right'
-    ),
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
+    'eval' => array(
+        'includeBlankOption' => true,
+        'tl_class' => 'w50'
+    ),
+    'sql' => "varchar(32) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_switch'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_switch'],
+    'exclude' => true,
+    'filter' => true,
+    'inputType' => 'checkbox',
+    'eval' => array(
+        'submitOnChange' => true,
+        'tl_class' => 'clr w50'
+    ),
+    'sql' => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_style'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_style'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['polygon_styles'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_article']['polygon_styles'],
+    'eval' => array(
+        'includeBlankOption' => true,
+        'tl_class' => 'clr w50'
+    ),
+    'sql' => "varchar(32) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_color'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_color'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => array(
         'includeBlankOption' => true,
         'tl_class' => 'w50'

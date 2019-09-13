@@ -13,6 +13,14 @@
                 <source>Would you like to use a color or an image in the background?</source>
                 <target>Would you like to use a color or an image in the background?</target>
             </trans-unit>
+            <trans-unit id="tl_article.polygon_switch.0">
+                <source>Use polygon</source>
+                <target>Use polygon</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_switch.1">
+                <source>Would you like to use a polygon as an overlay?</source>
+                <target>Would you like to use a polygon as an overlay?</target>
+            </trans-unit>
             <trans-unit id="tl_article.background_picture.0">
                 <source>Background picture</source>
                 <target>Background picture</target>
@@ -69,6 +77,22 @@
                 <source>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</source>
                 <target>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</target>
             </trans-unit>
+            <trans-unit id="tl_article.polygon_style.0">
+                <source>Polygon style</source>
+                <target>Polygon style</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_style.1">
+                <source>Here you can select the style of the Polygon.</source>
+                <target>Here you can select the style of the Polygon.</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_color.0">
+                <source>Polygon color</source>
+                <target>Polygon color</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_color.1">
+                <source>Choose the background for the Polygon.</source>
+                <target>Choose the background for the Polygon.</target>
+            </trans-unit>
             <trans-unit id="tl_article.floats.left">
                 <source>Left</source>
                 <target>Left</target>
@@ -116,6 +140,26 @@
             <trans-unit id="tl_article.colors.red">
                 <source>Red</source>
                 <target>Red</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_styles.top">
+                <source>Top</source>
+                <target>Top</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_styles.right">
+                <source>Right</source>
+                <target>Right</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_styles.bottom">
+                <source>Bottom</source>
+                <target>Bottom</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_styles.left">
+                <source>Left</source>
+                <target>Left</target>
+            </trans-unit>
+            <trans-unit id="tl_article.polygon_styles.cross">
+                <source>Cross</source>
+                <target>Cross</target>
             </trans-unit>
         </body>
     </file>

@@ -22,6 +22,12 @@
 <?php else: ?>
 
     <div class="<?= $this->class ?> block<?php if ($this->background_switch): ?><?php if ($this->background_color): ?> bg-<?= $this->background_color ?><?php endif; ?><?php if ($this->background_style): ?> bg-<?= $this->background_style ?><?php endif; ?><?php if ($this->background_float): ?> float-<?= $this->background_float ?><?php endif; ?><?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+        <?php if ($this->polygon_switch && $this->polygon_style): ?>
+            <div class="polygon polygon-<?= $this->polygon_style ?>">
+                {{file::polygons/polygon-<?= $this->polygon_style ?>.php<?php if ($this->polygon_color): ?>?color=<?= $this->polygon_color ?><?php endif; ?>}}
+            </div>
+        <?php endif; ?>
+
         <?php if ($this->background_switch && $this->background_picture): ?>
             <div class="article-image<?php if ($this->background_float): ?> float-<?= $this->background_float ?><?php endif; ?>">
                 <figure class="image_container">{{picture::<?= $this->background_picture ?><?php if ($this->background_size): $imageSize = StringUtil::deserialize($this->background_size); if ($imageSize[2]): ?>?size=<?= $imageSize[2] ?><?php endif; ?><?php endif; ?>}}</figure>
