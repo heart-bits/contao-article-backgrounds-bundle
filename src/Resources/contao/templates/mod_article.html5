@@ -21,14 +21,14 @@
 
 <?php else: ?>
 
-    <div class="<?= $this->class ?> block<?php if ($this->background_switch): ?><?php if ($this->background_color): ?> bg-<?= $this->background_color ?><?php endif; ?><?php if ($this->background_style): ?> bg-<?= $this->background_style ?><?php endif; ?><?php if ($this->background_float): ?> cut-<?= $this->background_float ?><?php endif; ?><?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+    <div class="<?= $this->class ?> block<?php if ($this->background_switch): ?><?php if ($this->background_color): ?> bg-<?= $this->background_color ?><?php endif; ?><?php if ($this->background_style): ?> bg-<?= $this->background_style ?><?php endif; ?><?php if ($this->background_float): ?> float-<?= $this->background_float ?><?php endif; ?><?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
         <?php if ($this->background_switch && $this->background_picture): ?>
-            <div class="article-image<?php if ($this->background_float): ?> cut-<?= $this->background_float ?><?php endif; ?>">
+            <div class="article-image<?php if ($this->background_float): ?> float-<?= $this->background_float ?><?php endif; ?>">
                 <figure class="image_container">{{picture::<?= $this->background_picture ?><?php if ($this->background_size): $imageSize = StringUtil::deserialize($this->background_size); if ($imageSize[2]): ?>?size=<?= $imageSize[2] ?><?php endif; ?><?php endif; ?>}}</figure>
             </div>
         <?php endif; ?>
 
-        <div class="<?php if ($this->background_switch): ?><?php if ($this->background_color_inside): ?> bg-<?= $this->background_color_inside ?><?php endif; ?><?php endif; ?>">
+        <div class="inside<?php if ($this->background_switch): ?><?php if ($this->background_color_inside): ?> bg-<?= $this->background_color_inside ?><?php endif; ?><?php endif; ?>">
             <?php if ($this->printable): ?>
                 <?php $this->block('syndication'); ?>
                 <!-- indexer::stop -->

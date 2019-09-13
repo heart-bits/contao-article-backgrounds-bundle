@@ -69,6 +69,14 @@
                 <source>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</source>
                 <target>Hier können Sie auswählen, ob das Bild links oder rechts positioniert werden soll. Lassen Sie das Feld frei, wenn der Hintergrund vollflächig dargestellt werden soll.</target>
             </trans-unit>
+            <trans-unit id="tl_article.floats.left">
+                <source>Left</source>
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="tl_article.floats.right">
+                <source>Right</source>
+                <target>Rechts</target>
+            </trans-unit>
             <trans-unit id="tl_article.styles.light">
                 <source>Light</source>
                 <target>Hell</target>

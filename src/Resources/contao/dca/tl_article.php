@@ -23,7 +23,7 @@ $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
 /**
  * Subpalettes
  */
-$GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_color_inside,background_size,background_style,background_picture,theme_primary_color';
+$GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_color_inside,background_size,background_style,background_picture,background_float';
 
 /**
  * Fields
@@ -135,6 +135,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = array(
         'left',
         'right'
     ),
+    'reference' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
     'eval' => array(
         'includeBlankOption' => true,
         'tl_class' => 'w50'
