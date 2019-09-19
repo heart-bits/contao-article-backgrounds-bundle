@@ -30,7 +30,7 @@
 
         <?php if ($this->background_switch && $this->background_picture): ?>
             <div class="article-image<?php if ($this->background_float): ?> float-<?= $this->background_float ?><?php endif; ?>">
-                <figure class="image_container">{{picture::<?= $this->background_picture ?><?php if ($this->background_size): $imageSize = StringUtil::deserialize($this->background_size); if ($imageSize[2]): ?>?size=<?= $imageSize[2] ?><?php endif; ?><?php endif; ?>}}</figure>
+                <?php $this->insert('image', $this->background_picture); ?>
             </div>
         <?php endif; ?>
 
