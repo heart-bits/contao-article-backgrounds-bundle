@@ -13,8 +13,8 @@
   ],
   "support":{
   	"email": "hi@heart-bits.com",
-		"issues":"https://github.com/heart-bits/hb-article-backgrounds-bundle/issues",
-		"source":"https://github.com/heart-bits/hb-article-backgrounds-bundle"
+		"issues":"https://github.com/heart-bits/contao-article-backgrounds-bundle/issues",
+		"source":"https://github.com/heart-bits/contao-article-backgrounds-bundle"
 	},
   "require":{
     "php":">=5.6.0",

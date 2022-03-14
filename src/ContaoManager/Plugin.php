@@ -1,13 +1,5 @@
 <?php
 
-/**
- * @package    contao-article-backgrounds
- * @author     heart-bits <hi@heart-bits.com>
- * @copyright  2019 heart-bits Sascha Wustmann. All rights reserved.
- * @filesource
- *
- */
-
 namespace Heartbits\ContaoArticleBackgrounds\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
