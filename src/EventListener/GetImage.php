@@ -14,7 +14,7 @@ class GetImage
             if ($objFile !== null || is_file(System::getContainer()->getParameter('kernel.project_dir') . '/' . $path)) {
                 $picture = $container
                     ->get('contao.image.picture_factory')
-                    ->create($rootDir . '/' . $path, \Contao\StringUtil::deserialize($objTemplate->background_size)[2]);
+                    ->create($rootDir . '/' . $path, \Contao\StringUtil::deserialize($objTemplate->background_size));
                 $data = [
                     'picture' => [
                         'img' => $picture->getImg($rootDir),
