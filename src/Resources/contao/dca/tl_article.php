@@ -12,7 +12,8 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'] = array('protected', 'published', 'background_switch', 'polygon_switch');
+$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'background_switch';
+$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'polygon_switch';
 
 $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
     'keywords;',
