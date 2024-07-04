@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+    bind:
+      $pictureFactory: "@contao.image.picture_factory"
+      $projectDir: '%kernel.project_dir%'
+
+  Heartbits\ContaoArticleBackgrounds\EventListener\GetImage:
+    public: true

@@ -9,6 +9,9 @@
  * @filesource
  */
 
+use Contao\BackendUser;
+use Contao\System;
+
 /**
  * Palettes
  */
@@ -31,135 +34,135 @@ $GLOBALS['TL_DCA']['tl_article']['subpalettes']['polygon_switch'] = 'polygon_sty
  * Fields
  */
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_switch'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_switch'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_switch'],
     'exclude' => true,
     'filter' => true,
     'inputType' => 'checkbox',
-    'eval' => array(
+    'eval' => [
         'submitOnChange' => true,
         'tl_class' => 'w50'
-    ),
+    ],
     'sql' => "char(1) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_picture'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_picture'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_picture'],
     'exclude' => true,
     'inputType' => 'fileTree',
-    'eval' => array(
+    'eval' => [
         'fieldType' => 'radio',
         'files' => true,
         'filesOnly' => true,
         'extensions' => $GLOBALS['TL_CONFIG']['validImageTypes'],
         'tl_class' => 'w50 clr'
-    ),
-    'sql' => (version_compare(VERSION, '3.2', '<')) ? "varchar(255) NOT NULL default ''" : "binary(16) NULL"
-);
+    ],
+    'sql' => "binary(16) NULL"
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_color'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
-    'eval' => array(
+    'eval' => [
         'includeBlankOption' => true,
         'tl_class' => 'w50 clr'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_color_inside'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
-    'eval' => array(
+    'eval' => [
         'includeBlankOption' => true,
         'tl_class' => 'w50'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_size'],
     'exclude' => true,
     'inputType' => 'imageSize',
     'reference' => &$GLOBALS['TL_LANG']['MSC'],
-    'eval' => array(
+    'eval' => [
         'rgxp' => 'natural',
         'includeBlankOption' => true,
         'nospace' => true,
         'helpwizard' => true,
         'tl_class' => 'w50'
-    ),
+    ],
     'options_callback' => static function () {
-        return Contao\System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(Contao\BackendUser::getInstance());
+        return System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(BackendUser::getInstance());
     },
     'sql' => "varchar(255) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_style'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_style'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_style'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
-    'eval' => array(
+    'eval' => [
         'tl_class' => 'w50'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['background_float'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
-    'eval' => array(
+    'eval' => [
         'includeBlankOption' => true,
         'tl_class' => 'w50'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_switch'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_switch'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_switch'],
     'exclude' => true,
     'filter' => true,
     'inputType' => 'checkbox',
-    'eval' => array(
+    'eval' => [
         'submitOnChange' => true,
         'tl_class' => 'clr w50'
-    ),
+    ],
     'sql' => "char(1) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_style'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_style'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_style'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['polygon_styles'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['polygon_styles'],
-    'eval' => array(
+    'eval' => [
         'includeBlankOption' => true,
         'tl_class' => 'clr w50'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_color'] = array(
+$GLOBALS['TL_DCA']['tl_article']['fields']['polygon_color'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_article']['polygon_color'],
     'exclude' => true,
     'inputType' => 'select',
     'options' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
-    'eval' => array(
+    'eval' => [
         'includeBlankOption' => true,
         'tl_class' => 'w50'
-    ),
+    ],
     'sql' => "varchar(32) NOT NULL default ''"
-);
+];

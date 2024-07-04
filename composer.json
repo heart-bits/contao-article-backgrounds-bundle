@@ -1,23 +1,29 @@
 {
-  "name":"heart-bits/contao-article-backgrounds-bundle",
-  "description":"Article backgrounds/Helper extension for Contao Open Source CMS",
-  "keywords":["contao", "article", "backgrounds", "artikel", "hintergrund"],
-  "type":"contao-bundle",
-  "license":"LGPL-3.0+",
-  "authors":[
+  "name": "heart-bits/contao-article-backgrounds-bundle",
+  "description": "Article backgrounds/Helper extension for Contao Open Source CMS",
+  "keywords": [
+    "contao",
+    "article",
+    "backgrounds",
+    "artikel",
+    "hintergrund"
+  ],
+  "type": "contao-bundle",
+  "license": "LGPL-3.0+",
+  "authors": [
     {
-      "name":"heart-bits",
-      "homepage":"http://heart-bits.com",
-      "role":"Developer"
+      "name": "heart-bits",
+      "homepage": "https://heart-bits.com",
+      "role": "Developer"
     }
   ],
-  "support":{
-  	"email": "hi@heart-bits.com",
-		"issues":"https://github.com/heart-bits/contao-article-backgrounds-bundle/issues",
-		"source":"https://github.com/heart-bits/contao-article-backgrounds-bundle"
-	},
-  "require":{
-    "php":">=5.6.0",
+  "support": {
+    "email": "hi@heart-bits.com",
+    "issues": "https://github.com/heart-bits/contao-article-backgrounds-bundle/issues",
+    "source": "https://github.com/heart-bits/contao-article-backgrounds-bundle"
+  },
+  "require": {
+    "php": ">=7.0",
     "contao/core-bundle": "~4.4",
     "contao-community-alliance/composer-plugin": "~3.0"
   },
@@ -25,7 +31,9 @@
     "contao/manager-bundle": "~4.4"
   },
   "autoload": {
-    "psr-4": { "Heartbits\\ContaoArticleBackgrounds\\": "src/" },
+    "psr-4": {
+      "Heartbits\\ContaoArticleBackgrounds\\": "src/"
+    },
     "classmap": [
       "src/Resources/contao/"
     ],
@@ -36,7 +44,7 @@
       "src/Resources/contao/templates/"
     ]
   },
-  "extra":{
+  "extra": {
     "contao-manager-plugin": "Heartbits\\ContaoArticleBackgrounds\\ContaoManager\\Plugin"
   }
 }
