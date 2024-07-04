@@ -5,6 +5,7 @@ services:
     bind:
       $pictureFactory: "@contao.image.picture_factory"
       $projectDir: '%kernel.project_dir%'
+      $requestStack: '@request_stack'
 
   Heartbits\ContaoArticleBackgrounds\EventListener\GetImage:
     public: true
