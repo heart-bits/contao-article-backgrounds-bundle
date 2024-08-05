@@ -19,8 +19,8 @@ $GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'background_swi
 $GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'polygon_switch';
 
 $GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
-    'keywords;',
-    'keywords;{article_background},background_switch,polygon_switch;',
+    'inColumn;',
+    'inColumn;{article_background},background_switch,polygon_switch;',
     $GLOBALS['TL_DCA']['tl_article']['palettes']['default']
 );
 
@@ -54,7 +54,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_picture'] = [
         'fieldType' => 'radio',
         'files' => true,
         'filesOnly' => true,
-        'extensions' => $GLOBALS['TL_CONFIG']['validImageTypes'],
+        'extensions' => '%contao.image.valid_extensions%',
         'tl_class' => 'w50 clr'
     ],
     'sql' => "binary(16) NULL"
@@ -99,7 +99,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = [
         'tl_class' => 'w50'
     ],
     'options_callback' => static function () {
-        return System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(BackendUser::getInstance());
+        return System::getContainer()->get('contao.image.sizes')->getOptionsForUser(BackendUser::getInstance());
     },
     'sql' => "varchar(255) NOT NULL default ''"
 ];

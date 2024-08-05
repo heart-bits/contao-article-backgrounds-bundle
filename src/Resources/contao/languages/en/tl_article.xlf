@@ -1,165 +1,125 @@
 <?xml version="1.0" ?><xliff version="1.1">
-    <file datatype="plaintext" original="src/Resources/contao/languages/en/tl_article.xlf" source-language="en" target-language="en">
+    <file datatype="plaintext" original="src/Resources/contao/languages/en/tl_article.xlf" source-language="en">
         <body>
             <trans-unit id="tl_article.article_background">
                 <source>Background</source>
-                <target>Background</target>
             </trans-unit>
             <trans-unit id="tl_article.background_switch.0">
                 <source>Use background</source>
-                <target>Use background</target>
             </trans-unit>
             <trans-unit id="tl_article.background_switch.1">
                 <source>Would you like to use a color or an image in the background?</source>
-                <target>Would you like to use a color or an image in the background?</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_switch.0">
                 <source>Use polygon</source>
-                <target>Use polygon</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_switch.1">
                 <source>Would you like to use a polygon as an overlay?</source>
-                <target>Would you like to use a polygon as an overlay?</target>
             </trans-unit>
             <trans-unit id="tl_article.background_picture.0">
                 <source>Background picture</source>
-                <target>Background picture</target>
             </trans-unit>
             <trans-unit id="tl_article.background_picture.1">
                 <source>Choose the background for the article.</source>
-                <target>Choose the background for the article.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_size.0">
                 <source>Background size</source>
-                <target>Background size</target>
             </trans-unit>
             <trans-unit id="tl_article.background_size.1">
                 <source>Choose the size of the background for the article.</source>
-                <target>Choose the size of the background for the article.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_color.0">
                 <source>Outside background color</source>
-                <target>Outside background color</target>
             </trans-unit>
             <trans-unit id="tl_article.background_color.1">
                 <source>Here you can choose a outside background color.</source>
-                <target>Here you can choose a outside background color.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_color_inside.0">
                 <source>Inside background color</source>
-                <target>Inside background color</target>
             </trans-unit>
             <trans-unit id="tl_article.background_color_inside.1">
                 <source>Here you can choose a inside background color.</source>
-                <target>Here you can choose a inside background color.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_position.0">
                 <source>Background position</source>
-                <target>Background position</target>
             </trans-unit>
             <trans-unit id="tl_article.background_position.1">
                 <source>Here you can select the position of the background image.</source>
-                <target>Here you can select the position of the background image.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_style.0">
                 <source>Background style</source>
-                <target>Background style</target>
             </trans-unit>
             <trans-unit id="tl_article.background_style.1">
                 <source>Here you should select the style of your background. This is mandatory for displaying the correct text colors on the background.</source>
-                <target>Here you should select the style of your background. This is mandatory for displaying the correct text colors on the background.</target>
             </trans-unit>
             <trans-unit id="tl_article.background_float.0">
                 <source>Positioning</source>
-                <target>Positioning</target>
             </trans-unit>
             <trans-unit id="tl_article.background_float.1">
                 <source>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</source>
-                <target>Here you can select, if the background should be placed left or right. Leave empty, if your background should cover the page.</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_style.0">
                 <source>Polygon style</source>
-                <target>Polygon style</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_style.1">
                 <source>Here you can select the style of the Polygon.</source>
-                <target>Here you can select the style of the Polygon.</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_color.0">
                 <source>Polygon color</source>
-                <target>Polygon color</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_color.1">
                 <source>Choose the background for the Polygon.</source>
-                <target>Choose the background for the Polygon.</target>
             </trans-unit>
             <trans-unit id="tl_article.floats.left">
                 <source>Left</source>
-                <target>Left</target>
             </trans-unit>
             <trans-unit id="tl_article.floats.right">
                 <source>Right</source>
-                <target>Right</target>
             </trans-unit>
             <trans-unit id="tl_article.styles.light">
                 <source>Light</source>
-                <target>Light</target>
             </trans-unit>
             <trans-unit id="tl_article.styles.dark">
                 <source>Dark</source>
-                <target>Dark</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.white">
                 <source>White</source>
-                <target>White</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.light-gray">
                 <source>Light-Gray</source>
-                <target>Light-Gray</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.dark-gray">
                 <source>Dark-Gray</source>
-                <target>Dark-Gray</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.black">
                 <source>Black</source>
-                <target>Black</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.yellow">
                 <source>Yellow</source>
-                <target>Yellow</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.blue">
                 <source>Blue</source>
-                <target>Blue</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.green">
                 <source>Green</source>
-                <target>Green</target>
             </trans-unit>
             <trans-unit id="tl_article.colors.red">
                 <source>Red</source>
-                <target>Red</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_styles.top">
                 <source>Top</source>
-                <target>Top</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_styles.right">
                 <source>Right</source>
-                <target>Right</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_styles.bottom">
                 <source>Bottom</source>
-                <target>Bottom</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_styles.left">
                 <source>Left</source>
-                <target>Left</target>
             </trans-unit>
             <trans-unit id="tl_article.polygon_styles.cross">
                 <source>Cross</source>
-                <target>Cross</target>
             </trans-unit>
         </body>
     </file>
