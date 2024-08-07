@@ -41,16 +41,16 @@ class GetImage
 
                 // Add meta data
                 if ($locale && isset($meta[$locale])) {
-                    if ($meta[$locale]['caption']) {
+                    if (isset($meta[$locale]['caption']) && $meta[$locale]['caption']) {
                         $data['caption'] = $meta[$locale]['caption'];
                     }
-                    if ($meta[$locale]['link']) {
+                    if (isset($meta[$locale]['link']) && $meta[$locale]['link']) {
                         $data['href'] = $meta[$locale]['link'];
                     }
-                    if ($meta[$locale]['alt']) {
+                    if (isset($meta[$locale]['alt']) && $meta[$locale]['alt']) {
                         $data['picture']['alt'] = $meta[$locale]['alt'];
                     }
-                    if ($meta[$locale]['title']) {
+                    if (isset($meta[$locale]['title']) && $meta[$locale]['title']) {
                         $data['picture']['title'] = $meta[$locale]['title'];
                         $data['linkTitle'] = $meta[$locale]['title'];
                     }
