@@ -10,6 +10,7 @@
  */
 
 use Contao\BackendUser;
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\System;
 
 /**
@@ -18,11 +19,11 @@ use Contao\System;
 $GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'background_switch';
 $GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'polygon_switch';
 
-$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace(
-    'inColumn;',
-    'inColumn;{article_background},background_switch,polygon_switch;',
-    $GLOBALS['TL_DCA']['tl_article']['palettes']['default']
-);
+PaletteManipulator::create()
+    ->addLegend('article_background', 'layout_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('background_switch', 'article_background', PaletteManipulator::POSITION_APPEND)
+    ->addField('polygon_switch', 'article_background', PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('default', 'tl_article');
 
 /**
  * Subpalettes
