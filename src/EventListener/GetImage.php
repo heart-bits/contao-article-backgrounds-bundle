@@ -1,5 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * @package    contao-article-backgrounds
+ * @author     heart-bits <hi@heart-bits.com>
+ * @copyright  2017 heart-bits Sascha Wustmann. All rights reserved.
+ * @filesource
+ */
+
 namespace Heartbits\ContaoArticleBackgrounds\EventListener;
 
 use Contao\CoreBundle\Image\PictureFactoryInterface;
@@ -9,34 +18,31 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class GetImage
 {
-    private $projectDir;
-    private $pictureFactory;
-    private $requestStack;
-
-    public function __construct(string $projectDir, PictureFactoryInterface $pictureFactory, RequestStack $requestStack)
-    {
-        $this->pictureFactory = $pictureFactory;
-        $this->projectDir = $projectDir;
-        $this->requestStack = $requestStack;
+    public function __construct(
+        private readonly string $projectDir,
+        private readonly PictureFactoryInterface $pictureFactory,
+        private readonly RequestStack $requestStack,
+    ) {
     }
 
-    public function pushImageToTemplate($objTemplate, $arrData, $objModule)
+    public function pushImageToTemplate($objTemplate, $arrData, $objModule): void
     {
         if ($objTemplate->background_switch && $objTemplate->background_picture) {
             $rootDir = $this->projectDir;
             $objFile = FilesModel::findByUuid($objTemplate->background_picture);
-            if ($objFile !== null || is_file($this->projectDir . '/' . $objFile->path)) {
+            if (null !== $objFile || is_file($this->projectDir.'/'.$objFile->path)) {
                 $locale = $this->requestStack->getCurrentRequest()->getLocale();
                 $meta = StringUtil::deserialize($objFile->meta);
 
                 // Add image
                 $picture = $this->pictureFactory
-                    ->create($rootDir . '/' . $objFile->path, StringUtil::deserialize($objTemplate->background_size));
+                    ->create($rootDir.'/'.$objFile->path, StringUtil::deserialize($objTemplate->background_size))
+                ;
                 $data = [
                     'picture' => [
                         'img' => $picture->getImg($rootDir),
                         'sources' => $picture->getSources($rootDir),
-                    ]
+                    ],
                 ];
 
                 // Add meta data
