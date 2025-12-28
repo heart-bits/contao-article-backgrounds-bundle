@@ -32,6 +32,7 @@
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0",
+    "terminal42/contao-build-tools": "dev-main"
   },
   "autoload": {
     "psr-4": {
@@ -49,5 +50,13 @@
   },
   "extra": {
     "contao-manager-plugin": "Heartbits\\ContaoArticleBackgrounds\\ContaoManager\\Plugin"
+  },
+  "config": {
+    "allow-plugins": {
+      "contao-components/installer": true,
+      "php-http/discovery": true,
+      "contao/manager-plugin": true,
+      "terminal42/contao-build-tools": true
+    }
   }
 }
