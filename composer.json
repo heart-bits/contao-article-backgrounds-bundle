@@ -23,11 +23,15 @@
     "source": "https://github.com/heart-bits/contao-article-backgrounds-bundle"
   },
   "require": {
-    "php": ">=7.0",
-    "contao/core-bundle": "^4.13 || ^5.0"
+    "php": "^8.2",
+    "contao/core-bundle": "^5.0",
+    "symfony/config": "^6.4 || ^7.0",
+    "symfony/dependency-injection": "^6.4 || ^7.0",
+    "symfony/http-foundation": "^6.4 || ^7.0",
+    "symfony/http-kernel": "^6.4 || ^7.0"
   },
   "require-dev": {
-    "contao/manager-bundle": "^4.4 || ^5.0"
+    "contao/manager-plugin": "^2.0",
   },
   "autoload": {
     "psr-4": {
