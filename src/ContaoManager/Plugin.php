@@ -1,5 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * @package    contao-article-backgrounds
+ * @author     heart-bits <hi@heart-bits.com>
+ * @copyright  2017 heart-bits Sascha Wustmann. All rights reserved.
+ * @filesource
+ */
+
 namespace Heartbits\ContaoArticleBackgrounds\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
@@ -10,19 +19,14 @@ use Heartbits\ContaoArticleBackgrounds\HeartbitsContaoArticleBackgroundsBundle;
 
 /**
  * Class Plugin.
- *
- * @package ContaoManager
  */
 class Plugin implements BundlePluginInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getBundles(ParserInterface $parser)
     {
         return [
             BundleConfig::create(HeartbitsContaoArticleBackgroundsBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class])
+                ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }

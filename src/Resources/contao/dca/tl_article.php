@@ -1,11 +1,11 @@
 <?php
 
-/**
- * Contao Open Source CMS
- *
- * @copyright  Sascha Wustmann 2019
- * @package    ArticleBackgrounds
- * @license    GNU/LGPL
+declare(strict_types=1);
+
+/*
+ * @package    contao-article-backgrounds
+ * @author     heart-bits <hi@heart-bits.com>
+ * @copyright  2017 heart-bits Sascha Wustmann. All rights reserved.
  * @filesource
  */
 
@@ -13,7 +13,7 @@ use Contao\BackendUser;
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\System;
 
-/**
+/*
  * Palettes
  */
 $GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'background_switch';
@@ -23,15 +23,16 @@ PaletteManipulator::create()
     ->addLegend('article_background', 'layout_legend', PaletteManipulator::POSITION_AFTER)
     ->addField('background_switch', 'article_background', PaletteManipulator::POSITION_APPEND)
     ->addField('polygon_switch', 'article_background', PaletteManipulator::POSITION_APPEND)
-    ->applyToPalette('default', 'tl_article');
+    ->applyToPalette('default', 'tl_article')
+;
 
-/**
+/*
  * Subpalettes
  */
 $GLOBALS['TL_DCA']['tl_article']['subpalettes']['background_switch'] = 'background_color,background_color_inside,background_size,background_style,background_picture,background_float';
 $GLOBALS['TL_DCA']['tl_article']['subpalettes']['polygon_switch'] = 'polygon_style,polygon_color,polygon_logo';
 
-/**
+/*
  * Fields
  */
 
@@ -42,9 +43,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_switch'] = [
     'inputType' => 'checkbox',
     'eval' => [
         'submitOnChange' => true,
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'sql' => "char(1) NOT NULL default ''"
+    'sql' => "char(1) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_picture'] = [
@@ -56,9 +57,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_picture'] = [
         'files' => true,
         'filesOnly' => true,
         'extensions' => '%contao.image.valid_extensions%',
-        'tl_class' => 'w50 clr'
+        'tl_class' => 'w50 clr',
     ],
-    'sql' => "binary(16) NULL"
+    'sql' => 'binary(16) NULL',
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = [
@@ -69,9 +70,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color'] = [
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => [
         'includeBlankOption' => true,
-        'tl_class' => 'w50 clr'
+        'tl_class' => 'w50 clr',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = [
@@ -82,9 +83,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_color_inside'] = [
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => [
         'includeBlankOption' => true,
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = [
@@ -97,12 +98,10 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_size'] = [
         'includeBlankOption' => true,
         'nospace' => true,
         'helpwizard' => true,
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'options_callback' => static function () {
-        return System::getContainer()->get('contao.image.sizes')->getOptionsForUser(BackendUser::getInstance());
-    },
-    'sql' => "varchar(255) NOT NULL default ''"
+    'options_callback' => static fn () => System::getContainer()->get('contao.image.sizes')->getOptionsForUser(BackendUser::getInstance()),
+    'sql' => "varchar(255) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_style'] = [
@@ -112,9 +111,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_style'] = [
     'options' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['styles'],
     'eval' => [
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = [
@@ -125,9 +124,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['background_float'] = [
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['floats'],
     'eval' => [
         'includeBlankOption' => true,
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_switch'] = [
@@ -137,9 +136,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_switch'] = [
     'inputType' => 'checkbox',
     'eval' => [
         'submitOnChange' => true,
-        'tl_class' => 'clr w50'
+        'tl_class' => 'clr w50',
     ],
-    'sql' => "char(1) NOT NULL default ''"
+    'sql' => "char(1) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_style'] = [
@@ -150,9 +149,9 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_style'] = [
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['polygon_styles'],
     'eval' => [
         'includeBlankOption' => true,
-        'tl_class' => 'clr w50'
+        'tl_class' => 'clr w50',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_color'] = [
@@ -163,7 +162,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['polygon_color'] = [
     'reference' => &$GLOBALS['TL_LANG']['tl_article']['colors'],
     'eval' => [
         'includeBlankOption' => true,
-        'tl_class' => 'w50'
+        'tl_class' => 'w50',
     ],
-    'sql' => "varchar(32) NOT NULL default ''"
+    'sql' => "varchar(32) NOT NULL default ''",
 ];
