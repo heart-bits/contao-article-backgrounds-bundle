@@ -23,7 +23,7 @@
     "source": "https://github.com/heart-bits/contao-article-backgrounds-bundle"
   },
   "require": {
-    "php": "^8.2",
+    "php": "^8.3",
     "contao/core-bundle": "^5.0",
     "symfony/config": "^6.4 || ^7.0",
     "symfony/dependency-injection": "^6.4 || ^7.0",

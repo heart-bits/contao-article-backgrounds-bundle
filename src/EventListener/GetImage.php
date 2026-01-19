@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Heartbits\ContaoArticleBackgrounds\EventListener;
 
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\CoreBundle\Image\PictureFactoryInterface;
 use Contao\FilesModel;
 use Contao\StringUtil;
@@ -25,6 +26,7 @@ class GetImage
     ) {
     }
 
+    #[AsHook('compileArticle')]
     public function pushImageToTemplate($objTemplate, $arrData, $objModule): void
     {
         if ($objTemplate->background_switch && $objTemplate->background_picture) {
